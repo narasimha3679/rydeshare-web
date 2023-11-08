@@ -139,3 +139,81 @@ body {
     }
 }
 
+.download-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 40px auto; /* Center the container */
+    max-width: 600px; /* Set a max-width for the container */
+}
+
+.download-container h3 {
+    color: #333; /* Dark text for heading */
+    margin-bottom: 16px;
+    font-size: 24px; /* Larger font size for the heading */
+}
+
+.download-container p {
+    color: #666; /* Lighter text color for the paragraph */
+    margin-bottom: 32px;
+}
+
+/* Styles for the buttons that wrap the images */
+.download-buttons .store-btn {
+    display: inline-block; /* This makes the <a> only as wide as the image */
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Styles for the images inside the buttons */
+.download-buttons .store-btn img {
+    height: 50px; /* Adjust as necessary to make both images look similar in size */
+    width: auto; /* Width is auto to maintain aspect ratio */
+    display: block; /* Ensures the image takes up the width of its container <a> tag */
+}
+
+/* Adjust this if Google Play image is still smaller */
+.google-play img {
+    min-height: 50px; /* You can use min-height to ensure that the height is at least 50px */
+    min-width: auto; /* Adjust if necessary, 'auto' should keep the aspect ratio */
+}
+
+/* Adjust this if Apple Store image needs resizing */
+.app-store img {
+    min-height: 50px; /* Match the height with the Google Play image */
+    min-width: auto; /* Adjust if necessary, 'auto' should keep the aspect ratio */
+}
+
+/* Existing styles... */
+
+/* Responsive adjustments for main content sections */
+@media (max-width: 768px) {
+    .main-content,
+    .main-content2 {
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .text-section,
+    .image-section,
+    .image-section2,
+    .text-section2 {
+        padding: 0;
+    }
+
+    .image-section img,
+    .image-section2 img {
+        max-width: 80%; /* Adjust the size of the image on smaller screens */
+        margin-top: 1em; /* Space between text and image on smaller screens */
+    }
+
+    /* Ensure text comes before the image in the second content section */
+    .main-content2 {
+        flex-direction: column-reverse;
+    }
+}
+
+/* Continue with existing styles... */
